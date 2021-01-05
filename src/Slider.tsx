@@ -1,6 +1,5 @@
 import { h } from 'preact';
 import {
-  IroColor,
   SliderShape,
   SliderType,
   sliderDefaultOptions,
@@ -11,7 +10,7 @@ import {
   cssBorderStyles,
   cssGradient,
   cssValue
-} from '@irojs/iro-core';
+} from '../../iro-core';
 
 import { IroComponentWrapper } from './ComponentWrapper';
 import { IroComponentProps, IroInputType } from './ComponentTypes';
@@ -44,7 +43,7 @@ export function IroSlider(props: IroSliderProps) {
         <div
           { ...rootProps }
           className="IroSlider"
-          style={{ 
+          style={{
             position: 'relative',
             width: cssValue(width),
             height: cssValue(height),
@@ -65,7 +64,7 @@ export function IroSlider(props: IroSliderProps) {
               height: `100%`,
               borderRadius: cssValue(radius),
               background: cssGradient(
-                'linear', 
+                'linear',
                 props.layoutDirection === 'horizontal' ? 'to top' : 'to right',
                 gradient
               ),

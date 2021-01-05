@@ -1,11 +1,11 @@
 import { h } from 'preact';
-import { resolveSvgUrl, cssValue } from '@irojs/iro-core';
+import {cssValue, resolveSvgUrl} from '../../iro-core';
 
 interface IroHandleProps {
   isActive: boolean;
   index: number;
-  x: number | string;
-  y: number | string;
+  x: number;
+  y: number;
   r: number;
   url: string;
   props: any;

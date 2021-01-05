@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import {
   IroColor,
+  resolveSvgUrl,
   getBoxDimensions,
   getBoxGradients,
   getBoxValueFromInput,
@@ -8,8 +9,8 @@ import {
   getHandleAtPoint,
   cssBorderStyles,
   cssGradient,
-  cssValue
-} from '@irojs/iro-core';
+  cssValue,
+} from '../../iro-core';
 
 import { IroComponentWrapper } from './ComponentWrapper';
 import { IroComponentProps, IroInputType } from './ComponentTypes';
@@ -59,7 +60,7 @@ export function IroBox(props: IroBoxProps) {
         <div
           { ...rootProps }
           className="IroBox"
-          style={{ 
+          style={{
             width: cssValue(width),
             height: cssValue(height),
             position: 'relative',
@@ -73,9 +74,9 @@ export function IroBox(props: IroBoxProps) {
               height: '100%',
               borderRadius: cssValue(radius),
               ...cssBorderStyles(props),
-              background: 
-                cssGradient('linear', 'to bottom', gradients[1]) 
-                + ',' + 
+              background:
+                cssGradient('linear', 'to bottom', gradients[1])
+                + ',' +
                 cssGradient('linear', 'to right', gradients[0]),
             }}
           />

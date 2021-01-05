@@ -1,8 +1,9 @@
 import { h, Component } from 'preact';
-import { IroColor, IroColorValue, IroColorPickerOptions, iroColorPickerOptionDefaults } from '@irojs/iro-core';
+import { IroColor, IroColorValue, IroColorPickerOptions, iroColorPickerOptionDefaults } from '../../iro-core';
 
 import { IroInputType } from './ComponentTypes';
 import { IroWheel } from './Wheel';
+import { IroTriangleWheel } from './TriangleWheel';
 import { IroSlider } from './Slider';
 import { createWidget } from './createWidget';
 

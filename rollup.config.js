@@ -33,12 +33,12 @@ module.exports = {
       sourcemap: devserver ? true : false,
       sourcemapFile: 'dist/iro.es.map'
     } : {
-      file: prod ? 'dist/iro.min.js' : 'dist/iro.js',
+      file: prod ? 'dist/iro.min.js' : 'demo/iro.js',
       format: 'umd',
       name: 'iro',
       banner: banner,
       sourcemap: devserver ? true : false,
-      sourcemapFile: prod ? 'dist/iro.min.js.map' : 'dist/iro.js.map'
+      sourcemapFile: prod ? 'dist/iro.min.js.map' : 'demo/iro.js.map'
     }
   ].filter(Boolean),
   plugins: [

@@ -9,7 +9,7 @@ import {
   getWheelValueFromInput,
   getHandleAtPoint,
   cssValue
-} from '@irojs/iro-core';
+} from '../../iro-core';
 
 import { IroComponentWrapper } from './ComponentWrapper';
 import { IroComponentProps, IroInputType } from './ComponentTypes';
@@ -43,7 +43,7 @@ export function IroWheel(props: IroWheelProps) {
 
   function handleInput(x: number, y: number, inputType: IroInputType) {
     if (inputType === IroInputType.Start) {
-      // input hitbox is a square, 
+      // input hitbox is a square,
       // so we want to ignore any initial clicks outside the circular shape of the wheel
       if (!isInputInsideWheel(props, x, y)) {
         // returning false will cease all event handling for this interaction
@@ -82,7 +82,7 @@ export function IroWheel(props: IroWheelProps) {
             height: cssValue(width),
             position: 'relative',
             ...rootStyles
-          }} 
+          }}
         >
           <div className="IroWheelHue" style={{
             ...circleStyles,
